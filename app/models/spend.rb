@@ -1,0 +1,2 @@
+class Spend < Point
+end
