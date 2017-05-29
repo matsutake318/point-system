@@ -1,4 +1,4 @@
-<h1>Sign up</h1>
+<h1>番号とパスワードを設定してください</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -6,13 +6,13 @@
       
       <%= render 'shared/error_messages', object: f.object %>
 
-      <%= f.label :number %>
+      <%= f.label :電話番号 %>
       <%= f.text_field :number, class: 'form-control' %>
 
-      <%= f.label :password %>
+      <%= f.label :パスワード %>
       <%= f.password_field :password, class: 'form-control' %>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.label :password_confirmation, "パスワード再確認" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
 
 

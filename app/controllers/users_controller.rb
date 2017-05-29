@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "登録完了しました"
       redirect_to @user
     else
       render 'new'
@@ -26,6 +26,24 @@ class UsersController < ApplicationController
   end
   
   def edit
+  end
+  
+  def pointview
+    @user = User.find(params[:id])
+    @saves = @user.saves
+    @spends = @user.spends
+    @totalpoint = 0
+    @saves.each do |s|
+         @totalpoint += s.point
+    end
+    @spends.each do |sp|
+         @totalpoint -= sp.point
+    end
+  end
+  
+  def pointspend
+    @user = User.find(params[:id])
+    @spend = @user.spends.build
   end
   
   def update

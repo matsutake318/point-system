@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root 'points#index'
   
   get 'signup',  to: 'users#new'
@@ -7,7 +9,14 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   
   
-  resources :users
+  resources :users do
+    member do
+      get 'pointview'
+      get 'pointspend'
+    end
+  end
+  
+  resources :spends
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,15 @@
+<% if @saves.any? %>
+  <%#ポイント登録がある時は %>
+  Totalpoint: <%= @totalpoint %>
+  <br>
+  
+  point ためた履歴<br>
+  <% @saves.each do |f| %>
+     <%= f.point %>　point -> <%= f.created_at %> <br>
+  <% end %>
+  
+  point使った履歴<br>
+  <% @spends.each do |f| %>
+      <%= f.point %> point -> <%= f.created_at %> <br>
+  <% end %>
+<% end %>

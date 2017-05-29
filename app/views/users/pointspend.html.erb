@@ -1,0 +1,9 @@
+
+
+<%= form_for(@spend) do |f| %>
+
+    <%= f.number_field :point %>
+    <%= f.hidden_field :user_id, value: @user.id %>
+    <%= f.submit "ポイントを使う" %>
+    
+<% end %>
