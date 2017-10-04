@@ -1,4 +1,3 @@
-
 class SpendsController < ApplicationController
 
 def create

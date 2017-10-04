@@ -14,5 +14,6 @@ class User < ActiveRecord::Base
     has_many :spends
 end
 
+
 # knives  -> knife
 # saves  -> safe

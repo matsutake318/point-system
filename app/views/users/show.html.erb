@@ -4,6 +4,8 @@
         <%= @user.number %>
     </div>
     
-    <p><%= link_to "ポイントを見る", pointview_user_path(@user) %></p>
-    <p><%= link_to "ポイントを使う", pointspend_user_path(@user) %></p>
+    
+        <p><%= link_to "ポイントを見る", pointview_user_path(@user) %></p>
+        <p><%= link_to "ポイントを使う", pointspend_user_path(@user) %></p>
+        <p><%= link_to "ログアウト", root_path %></p>
 </div>
